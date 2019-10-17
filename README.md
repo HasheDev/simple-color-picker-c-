@@ -1,2 +1,2 @@
-# simple-color-picker-c-
+# simple-color-picker-c#
 um simple color picker c#

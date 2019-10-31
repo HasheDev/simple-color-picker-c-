@@ -41,8 +41,6 @@ namespace Project
 
         private void BtnRandom_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            Hide();
             for (int i = 0; i < 161; i++)
             {
                 Random rnd = new Random();
@@ -60,8 +58,6 @@ namespace Project
                 
                 if (i == 160)
                 {
-                    Show();
-                    this.WindowState = FormWindowState.Normal;
                     break;
                 }
             }

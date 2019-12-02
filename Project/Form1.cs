@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Project
@@ -8,17 +9,19 @@ namespace Project
     {
         PictureBox Picture = new PictureBox();
 
-        public void Createpic(Point size, Size loc, String name, int x, int y, int z)
+        public void Createpic(int w, int h, int xx, int yy, String name, int x, int y, int z)
         {
             body.BackColor = Color.Red;
             PictureBox picture = new PictureBox
             {
                 Name = name,
-                Size = new Size(size),
-                Location = new Point(loc),
+                Size = new Size(xx, yy),
+                Location = new Point(w, h),
                 BackColor = Color.FromArgb(x, y, z),
-                Anchor = AnchorStyles.Left,
+                Anchor = (AnchorStyles.Top | AnchorStyles.Left),
+                
             };
+            
             picture.Click += new EventHandler(delegate (object s, EventArgs e) {
                 string hex;
                 hex = (picture.BackColor.ToArgb() & 0x00FFFFFF).ToString("X6");
@@ -38,27 +41,35 @@ namespace Project
 
         }
         int locxresolver = 0;
-
+        public void size(int x, int y)
+        {
+            Size loc = new Size(x, y);
+            return;
+        }
+        public void width(int x,int y)
+        {
+            Point size = new Point(x, y);
+        }
         private void BtnRandom_Click(object sender, EventArgs e)
         {
             for (int i = 0; i < 161; i++)
             {
                 Random rnd = new Random();
-                Point size = new Point(60, 40);
-                Size loc = new Size(-280 + locxresolver, 29);
-                Createpic(size, loc, "NewHexColor" + i, rnd.Next(255), rnd.Next(255), rnd.Next(255));
-                Size locc = new Size(-280 + locxresolver, 29 + 40);//69
-                Createpic(size, locc, "NewHexColor" + i, rnd.Next(255), rnd.Next(255), rnd.Next(255));
-                Size loccc = new Size(-280 + locxresolver, 29 + 40);//69
-                Createpic(size, loccc, "NewHexColor" + i, rnd.Next(255), rnd.Next(255), rnd.Next(255));
+                int d = 13;
+                Createpic(1, d + locxresolver, 120, 60, "NewHexColor" + i, rnd.Next(255), rnd.Next(255), rnd.Next(255));
+                Createpic(121, d + locxresolver, 120, 60, "NewHexColor" + i +rnd.Next(1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
+                Createpic(121 + 120, d + locxresolver, 120, 60, "NewHexColor" + i + rnd.Next(1000 | 69), rnd.Next(255), rnd.Next(255), rnd.Next(255));
+                Createpic(121 + 120 + 120, d + locxresolver, 120, 60, "NewHexColor" + i + rnd.Next(7888 | 1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
+                Createpic(121 + 120 + 120 + 120, d + locxresolver, 120, 60, "NewHexColor" + i + rnd.Next(7888 | 1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
+                Createpic(121 + 120 + 120 + 120 + 120, d + locxresolver, 120, 60, "NewHexColor" + i + rnd.Next(7888 | 1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
+                Createpic(121 + 120 + 120 + 120 + 120 + 120, d + locxresolver, 120, 60, "NewHexColor" + i + rnd.Next(7888 | 1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
+                Createpic(121 + 120 + 120 + 120 + 120 + 120 + 120, d + locxresolver, 120, 60, "NewHexColor" + i + rnd.Next(7888 | 1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
+                Createpic(121 + 120 + 120 + 120 + 120 + 120 + 120 + 120, d + locxresolver, 120, 60, "NewHexColor" + i + rnd.Next(7888 | 1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
+                Createpic(121 + 120 + 120 + 120 + 120 + 120 + 120 + 120 +120, d + locxresolver, 120, 60, "NewHexColor" + i + rnd.Next(7888 | 1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
                 if (i > 0)
                 {
                     locxresolver += 6;
-                }
-                
-                if (i == 160)
-                {
-                    break;
+                    Task.Delay(30);
                 }
             }
 

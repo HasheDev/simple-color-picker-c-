@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panelHeader = new System.Windows.Forms.Panel();
+            this.windowcontrols1 = new Project.controls.windowcontrols();
             this.EffectTitle = new System.Windows.Forms.Timer(this.components);
             this.lbltitle = new System.Windows.Forms.Label();
             this.body = new System.Windows.Forms.PictureBox();
             this.btnRandom = new System.Windows.Forms.Button();
-            this.windowcontrols1 = new Project.controls.windowcontrols();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.body)).BeginInit();
             this.SuspendLayout();
@@ -55,6 +55,15 @@
             this.panelHeader.MouseMove += new System.Windows.Forms.MouseEventHandler(this.PanelHeader_MouseMove);
             this.panelHeader.MouseUp += new System.Windows.Forms.MouseEventHandler(this.PanelHeader_MouseUp);
             // 
+            // windowcontrols1
+            // 
+            this.windowcontrols1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.windowcontrols1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.windowcontrols1.Location = new System.Drawing.Point(430, 7);
+            this.windowcontrols1.Name = "windowcontrols1";
+            this.windowcontrols1.Size = new System.Drawing.Size(81, 24);
+            this.windowcontrols1.TabIndex = 0;
+            // 
             // EffectTitle
             // 
             this.EffectTitle.Interval = 1000;
@@ -65,11 +74,11 @@
             this.lbltitle.AutoSize = true;
             this.lbltitle.BackColor = System.Drawing.Color.MidnightBlue;
             this.lbltitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbltitle.Font = new System.Drawing.Font("YD2002", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.lbltitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.lbltitle.ForeColor = System.Drawing.Color.Cornsilk;
             this.lbltitle.Location = new System.Drawing.Point(12, 36);
             this.lbltitle.Name = "lbltitle";
-            this.lbltitle.Size = new System.Drawing.Size(128, 21);
+            this.lbltitle.Size = new System.Drawing.Size(129, 25);
             this.lbltitle.TabIndex = 2;
             this.lbltitle.Text = "Color Picker";
             this.lbltitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Lbltitle_MouseDown);
@@ -105,15 +114,6 @@
             this.btnRandom.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.btnRandom.UseVisualStyleBackColor = false;
             this.btnRandom.Click += new System.EventHandler(this.BtnRandom_Click);
-            // 
-            // windowcontrols1
-            // 
-            this.windowcontrols1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.windowcontrols1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.windowcontrols1.Location = new System.Drawing.Point(430, 7);
-            this.windowcontrols1.Name = "windowcontrols1";
-            this.windowcontrols1.Size = new System.Drawing.Size(81, 24);
-            this.windowcontrols1.TabIndex = 0;
             // 
             // Form1
             // 

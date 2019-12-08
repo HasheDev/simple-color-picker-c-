@@ -7,6 +7,7 @@ namespace Project
 {
     public partial class Form1 : Form
     {
+        Random rnd = new Random();
         PictureBox Picture = new PictureBox();
 
         public void Createpic(int w, int h, int xx, int yy, String name, int x, int y, int z)
@@ -30,6 +31,9 @@ namespace Project
                 lbltitle.BackColor = picture.BackColor;
                 lbltitle.Text = "#" + hex;
                 Clipboard.SetText(lbltitle.Text);
+                BackColor = Color.FromArgb(picture.BackColor.ToArgb());
+                btnRandom.BackColor = Color.FromArgb(picture.BackColor.ToArgb());
+                btnRandom.ForeColor = Color.FromArgb(rnd.Next(255), rnd.Next(255), rnd.Next(255));
             });
             body.Parent = picture;
             StringPack.Count = 1;
@@ -52,24 +56,23 @@ namespace Project
         }
         private void BtnRandom_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 161; i++)
+            for (int i = 0; i < 100; i++)
             {
-                Random rnd = new Random();
                 int d = 13;
-                Createpic(1, d + locxresolver, 120, 60, "NewHexColor" + i, rnd.Next(255), rnd.Next(255), rnd.Next(255));
-                Createpic(121, d + locxresolver, 120, 60, "NewHexColor" + i +rnd.Next(1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
-                Createpic(121 + 120, d + locxresolver, 120, 60, "NewHexColor" + i + rnd.Next(1000 | 69), rnd.Next(255), rnd.Next(255), rnd.Next(255));
-                Createpic(121 + 120 + 120, d + locxresolver, 120, 60, "NewHexColor" + i + rnd.Next(7888 | 1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
-                Createpic(121 + 120 + 120 + 120, d + locxresolver, 120, 60, "NewHexColor" + i + rnd.Next(7888 | 1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
-                Createpic(121 + 120 + 120 + 120 + 120, d + locxresolver, 120, 60, "NewHexColor" + i + rnd.Next(7888 | 1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
-                Createpic(121 + 120 + 120 + 120 + 120 + 120, d + locxresolver, 120, 60, "NewHexColor" + i + rnd.Next(7888 | 1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
-                Createpic(121 + 120 + 120 + 120 + 120 + 120 + 120, d + locxresolver, 120, 60, "NewHexColor" + i + rnd.Next(7888 | 1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
-                Createpic(121 + 120 + 120 + 120 + 120 + 120 + 120 + 120, d + locxresolver, 120, 60, "NewHexColor" + i + rnd.Next(7888 | 1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
-                Createpic(121 + 120 + 120 + 120 + 120 + 120 + 120 + 120 +120, d + locxresolver, 120, 60, "NewHexColor" + i + rnd.Next(7888 | 1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
+                int y = 15;
+                Createpic(0, d + locxresolver + y, 120, 60, "NewHexColor" + i, rnd.Next(255), rnd.Next(255), rnd.Next(255));
+                Createpic(121, d + locxresolver + y, 120, 60, "NewHexColor" + i +rnd.Next(1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
+                Createpic(121 + 120, d + locxresolver + y, 120, 60, "NewHexColor" + i + rnd.Next(1000 | 69), rnd.Next(255), rnd.Next(255), rnd.Next(255));
+                Createpic(121 + 120 + 120, d + locxresolver + y, 120, 60, "NewHexColor" + i + rnd.Next(7888 | 1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
+                Createpic(121 + 120 + 120 + 120, d + locxresolver + y, 120, 60, "NewHexColor" + i + rnd.Next(7888 | 1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
+                Createpic(121 + 120 + 120 + 120 + 120, d + locxresolver + y, 120, 60, "NewHexColor" + i + rnd.Next(7888 | 1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
+                Createpic(121 + 120 + 120 + 120 + 120 + 120, d + locxresolver + y, 120, 60, "NewHexColor" + i + rnd.Next(7888 | 1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
+                Createpic(121 + 120 + 120 + 120 + 120 + 120 + 120, d + locxresolver + y, 120, 60, "NewHexColor" + i + rnd.Next(7888 | 1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
+                Createpic(121 + 120 + 120 + 120 + 120 + 120 + 120 + 120, d + locxresolver + y, 120, 60, "NewHexColor" + i + rnd.Next(7888 | 1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
+                Createpic(121 + 120 + 120 + 120 + 120 + 120 + 120 + 120 +120, d + locxresolver + y, 120, 60, "NewHexColor" + i + rnd.Next(7888 | 1000), rnd.Next(255), rnd.Next(255), rnd.Next(255));
                 if (i > 0)
                 {
-                    locxresolver += 6;
-                    Task.Delay(30);
+                    locxresolver += 62;
                 }
             }
 

@@ -3,6 +3,6 @@
 ### Visualização do Color Picker
  ![ColorPicker Logo](/ColorPicker.png)
 ### Video Color Picker
-[![Color Picker em c#](http://img.youtube.com/vi/Q3vSyIBjSfs/0.jpg)](http://www.youtube.com/watch?v=Q3vSyIBjSfs "Video Color Picker")
+[![Color Picker em c#](https://img.youtube.com/vi/LJrltae0RBs/mq3.jpg)](https://www.youtube.com/watch?v=LJrltae0RBs "Video Color Picker 2.0")
 ### Versões
 - [1.0](/versions/VERSION.md#informações-da-versão-10)

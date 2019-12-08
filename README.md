@@ -5,4 +5,4 @@
 ### Video Color Picker
 [![Color Picker em c#](http://img.youtube.com/vi/Q3vSyIBjSfs/0.jpg)](http://www.youtube.com/watch?v=Q3vSyIBjSfs "Video Color Picker")
 ### Versões
-- [1.0](/versions/)
+- [1.0](/versions/VERSION.md)
